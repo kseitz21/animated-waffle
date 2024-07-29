@@ -39,6 +39,15 @@ h2 {
     width: fit-content;
 }
 
+h3 {
+    color: #F4F0EE;
+    text-align: center;
+    font-family: Chivo;
+    font-size: x-large;
+    font-style: normal;
+    font-weight: 600;
+}
+
 p {
     display: flex;
     color: #F4F0EE;
@@ -182,7 +191,6 @@ main {
 }
 
 .content img {
-    padding: 100px auto;
     margin-left: 200px;
 }
 
@@ -206,6 +214,42 @@ button {
     border: 3px solid #9DA5EB;
     background-color: #313131;
 }
+
+.content button {
+    margin: auto;
+}
+
+/*--Project Highlights*/
+
+.project-hl h1 {
+    text-align: center;
+    color:#F4F0EE;
+    margin: 50px auto;
+}
+
+.project-hl :not(h1) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.case-studies {
+    display: flex;
+}
+
+.case-text {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-content: flex-end;
+    max-width: 600px;
+    max-height: 400px;
+}
+
 
 /*--Footer--*/
 
