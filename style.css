@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: 1px solid green;
 }
 
 body {
@@ -83,7 +84,7 @@ nav ul {
     justify-content: flex-end;
     align-content: flex-end;
     flex-direction: row;
-    text-align: end; 
+    text-align: end;
 }
 
 nav li {
@@ -116,16 +117,15 @@ main {
 .sparkle-1 {
     stroke-width: 3px;
     stroke: #F4F0EE;
-    width: 129px;
-    height: 129px;
+    width: 100px;
     transform: rotate(6.877deg);
     flex-shrink: 0;
     box-sizing: border-box;
     align-self: flex-end;
     z-index: -1;
     position: absolute;
-    top: -45px;
-    left: -120px;
+    top: -38px;
+    left: -85px;
     animation: twinkle 4s ease infinite;
 }
 
@@ -133,15 +133,19 @@ main {
     from {
         opacity: 1;
     }
+
     25% {
         opacity: .5;
     }
+
     50% {
         opacity: .1;
     }
+
     75% {
-        opacity:.5;
+        opacity: .5;
     }
+
     to {
         opacity: 1;
     }
@@ -149,7 +153,7 @@ main {
 
 
 .sparkle-2 {
-    width: 42.75px;
+    width: 37.75px;
     height: 42.75px;
     transform: rotate(-10.117deg);
     flex-shrink: 0;
@@ -167,15 +171,19 @@ main {
     from {
         opacity: .5;
     }
+
     25% {
-        opacity: 1; 
+        opacity: 1;
     }
+
     50% {
         opacity: .5;
     }
+
     75% {
         opacity: .1;
     }
+
     to {
         opacity: .5;
     }
@@ -187,11 +195,35 @@ main {
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    margin-top: 100px;
+    margin-top: 50px;
+    position: relative;
 }
 
-.content img {
+.headshot {
     margin-left: 200px;
+    height: 400px;
+}
+
+.sparkle-3 {
+    position: absolute;
+    height: 45px;
+    left: 155px;
+    bottom: -35px;
+    transform: rotate(-46deg);
+}
+
+.sparkle-4 {
+    position: relative;
+    height: 45px;
+    right: 165px;
+    bottom: -64px;
+}
+
+.sparkle-5 {
+    position: relative;
+    height: 25px;
+    left: 87px;
+    bottom: 24px;
 }
 
 .content-text :not(button) {
@@ -201,6 +233,8 @@ main {
     align-content: flex-end;
     max-width: 600px;
     max-height: 400px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 button {
@@ -217,14 +251,16 @@ button {
 
 .content button {
     margin: auto;
+    margin-bottom: 50px;
 }
 
 /*--Project Highlights*/
 
 .project-hl h1 {
     text-align: center;
-    color:#F4F0EE;
+    color: #F4F0EE;
     margin: 50px auto;
+    font-size: 36px;
 }
 
 .project-hl :not(h1) {
@@ -234,7 +270,9 @@ button {
     align-content: center;
     justify-content: center;
     align-items: flex-start;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .case-studies {
@@ -248,6 +286,7 @@ button {
     align-content: flex-end;
     max-width: 600px;
     max-height: 400px;
+    margin: 10px 0px;
 }
 
 
@@ -266,7 +305,7 @@ footer ul {
     justify-content: flex-end;
     align-content: flex-end;
     flex-direction: row;
-    text-align: end; 
+    text-align: end;
 }
 
 footer li {
@@ -274,4 +313,67 @@ footer li {
     justify-content: flex-end;
     align-content: flex-end;
     padding: 20px 40px;
+}
+
+
+@media only screen and (max-width:950px) {
+    .sparkle-3, .sparkle-4, .sparkle-5 {
+        display: none !important;
+    }
+
+    .headshot {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+@media only screen and (max-width:800px) {
+
+    /*Full Page*/
+    .sparkle-1, .sparkle-2 , .sparkle-3, .sparkle-4, .sparkle-5 {
+        display: none !important;
+    }
+
+    /*Header/Footer*/
+    nav {
+        width: 100%;
+    }
+
+    nav li, footer li {
+        display: flex;
+        padding: 0px 10px;
+    }
+
+    .logo {
+        width: 75px;
+    }
+
+    /*Typography*/
+    h1 {
+        font-size: xx-large;
+    }
+
+    h3 {
+        font-size: medium;
+    }
+
+    p {
+        font-size: small;
+    }
+
+    .content p:first-child {
+        margin-top: 0px;
+    }
+
+    .hero {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .headshot {
+        height: 250px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 150px;
+    }
 }
